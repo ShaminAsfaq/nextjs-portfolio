@@ -9,7 +9,10 @@ export const metadata = {
   title: "Shamin Asfaq | Full-Stack Developer",
   description:
     "Portfolio of Shamin Asfaq, a Full-Stack Developer specializing in Java, Angular, and JavaScript technologies.",
-    generator: 'v0.dev'
+  icons: {
+    icon: "/s.png", // /public/s.png
+  },
+  generator: 'v0.dev'
 }
 
 export default function RootLayout({

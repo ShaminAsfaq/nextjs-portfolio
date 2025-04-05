@@ -1,13 +1,24 @@
 import { Mail, Github, Facebook, Instagram, Calendar, Globe } from "lucide-react"
 import Link from "next/link"
 import { ScrollToTop } from "@/components/scroll-to-top"
+import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative h-[50vh] min-h-[400px] w-full bg-gray-50 flex items-center justify-center">
-        <div className="container px-4 md:px-6 text-center">
+        <section id="header-section" className="grid md:grid-cols-2 gap-6">
+          <div id="profile-image" className="container px-4 md:px-6 text-center">
+            <Image
+                src="/IMG_1496.jpg"
+                alt="IMG_1496.HEIC"
+                width={250}
+                height={120}
+                className="rounded-full aspect-square object-cover"
+            />
+          </div>
+          <div id="name-details" className="container px-4 md:px-6 text-center flex flex-col justify-center">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Shamin Asfaq</h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8">Full-Stack Developer, Tech Enthusiast, Minimalist</p>
           <div className="flex justify-center space-x-4">
@@ -25,6 +36,7 @@ export default function Home() {
             />
           </div>
         </div>
+        </section>
       </section>
 
       <main className="container px-4 md:px-6 py-12 mx-auto">
@@ -33,12 +45,16 @@ export default function Home() {
           <h2 className="text-2xl font-bold mb-6 pb-2 border-b">About Me</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <p className="text-gray-700 mb-4">
-                I'm a Full-Stack Developer with experience in Java (Spring Boot), Angular, and JavaScript technologies.
-                Currently pursuing a Master's degree in Automotive Software Engineering at TU Chemnitz.
+              <p className="text-gray-700 mb-4 text-justify leading-relaxed">
+                As a <strong>Full-Stack Developer</strong> with expertise in <strong>Java (Spring Boot), Angular,</strong> and <strong>JavaScript</strong> technologies,
+                I am committed to delivering high-quality, scalable applications.
+                Currently pursuing a <strong>Master's degree in Automotive Software Engineering</strong> at <strong>TU Chemnitz, </strong>
+                I am honing my skills to bridge the gap between software development and the automotive industry.
               </p>
-              <p className="text-gray-700">
-                My focus is on building efficient, user-friendly applications that solve real-world problems.
+              <p className="text-gray-700 text-justify leading-relaxed">
+                I am passionate about building efficient, user-centric applications that address real-world challenges
+                and deliver tangible value to users. With a strong foundation in both front-end and back-end development,
+                I focus on creating seamless, intuitive experiences while ensuring robust and scalable architecture.
               </p>
             </div>
             <div className="space-y-2">
@@ -62,6 +78,9 @@ export default function Home() {
             <Skill name="HTML/CSS" />
             <Skill name="JavaScript" />
             <Skill name="Node.js" />
+            <Skill name="Docker" />
+            <Skill name="Material Design" />
+            <Skill name="SQL/NoSQL" />
           </div>
         </section>
 
